@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon -x ts-node-dev --respawn src/index.ts",
-    "start": "ts-node-dev dist/index.js",
+    "start:dev": "nodemon -x ts-node-dev --respawn src/server.ts",
+    "start": "ts-node-dev dist/server.js",
     "build": "tsc -p ."
   },
   "author": "",
@@ -13,17 +13,19 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
+    "envalid": "^7.1.0",
     "express": "^4.17.1",
-    "livereload": "^0.9.3",
+    "mapbox-gl": "^2.2.0",
     "mysql2": "^2.2.5",
     "typeorm": "^0.2.31"
   },
   "devDependencies": {
     "@types/express": "^4.17.1",
-    "@types/livereload": "^0.9.0",
     "@types/node": "^12.7.8",
     "ts-node": "^9.1.1",
     "ts-node-dev": "^1.1.6",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.3",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0"
   }
 }
