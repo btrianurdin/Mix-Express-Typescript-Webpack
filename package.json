@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:both": "concurrently \"npm run start:dev\" \"npm run start:client\"",
     "start:dev": "nodemon -x ts-node-dev --respawn src/server.ts",
     "start": "ts-node-dev dist/server.js",
-    "build": "tsc -p ."
+    "build": "tsc -p .",
+    "start:client": "webpack --config webpack.config.js --watch"
   },
-  "author": "",
+  "author": "Trianurdin B",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^6.0.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "envalid": "^7.1.0",

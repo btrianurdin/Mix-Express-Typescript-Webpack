@@ -28,6 +28,7 @@ class App {
     this.app.set("view engine", "ejs");
     this.app.use(express.json());
     this.app.use(express.static(path.join(__dirname, "../public")));
+    
   }
 
   private initializeControllers(controllers: Controller[]) {
